@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+   acidiagram:
+     image: nuttea/docker-aci-diagram
+     volumes:
+       - ./:/tmp/diagram
+     command: /bin/bash -c "echo 'python diagram.py -u http://10.68.116.250 -l admin -p C1sco123 -o /tmp/diagram/apic1-001.png'; python diagram.py -u http://10.68.116.250 -l admin -p C1sco123 -o /tmp/diagram/apic1-001.png"
